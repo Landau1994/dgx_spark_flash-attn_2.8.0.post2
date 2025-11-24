@@ -5,7 +5,16 @@ The complied whl of flash-attn_2.8.0.post2  for dgx_spark, please see the releas
 
 The dependent envrionment can be seen in this repo, the yaml, and pip list files.
 
-The compling process can be seen in [https://github.com/Dao-AILab/flash-attention/issues/1969](https://github.com/Dao-AILab/flash-attention/issues/1969#issuecomment-3539620956), please remember, it would have error when compiling with ninja, you have better build in just one thread
+After install the require environment, you can complied from source by the following command
+```shell
+git clone https://github.com/Dao-AILab/flash-attention.git
+cd flash-attention
+git checkout -b 2.8.0.post2
+export NVCC_THREADS=10
+nohup python setup.py bdist_wheel > build_log_20251124.txt 2>&1 &
+```
+
+The dissussion of the  compling process can be seen in [https://github.com/Dao-AILab/flash-attention/issues/1969](https://github.com/Dao-AILab/flash-attention/issues/1969#issuecomment-3539620956), please remember, it would have error when compiling with ninja, you have better build in just one thread
 
 ## How to use flahs attention, here is the demo code
 
