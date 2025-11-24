@@ -136,8 +136,18 @@ except Exception as e:
     print(f"FlashAttention2 failed: {e}")
     print("Note: Ensure flash-attn is properly installed for GPU compatibility")
 
-
-
 ```
+Here is the results
+```text
+Benchmarking FlashAttention2 vs PyTorch SDPA...
+
+PyTorch SDPA time: 2.84 ms
+FlashAttention2 time: 1.91 ms
+Maximum difference: 0.00048828125
+FlashAttention2 speedup: 1.49x
+```
+
+
+
 
 
